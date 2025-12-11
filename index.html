@@ -36,7 +36,7 @@
     .tag-btn:hover{border-color:#e60023;color:#e60023}
     .tag-btn.active{background:#111;color:#fff;border-color:#111}
 
-    /* CONTAINER / GRID */
+    /* GRID */
     .container{width:92%;max-width:1200px;margin:28px auto 80px}
     .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
     .tool-box{padding:26px 18px;border:1px solid #f0f0f0;border-radius:12px;text-align:center;transition:.25s;cursor:pointer;background:#fff}
@@ -45,25 +45,6 @@
     .tool-box p{font-size:14px;color:#666}
     .tool-box:hover{transform:translateY(-6px);box-shadow:0 12px 30px rgba(0,0,0,0.08);border-color:#e60023}
 
-    /* MODAL (Login/Signup) */
-    .modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,0.45);display:none;align-items:center;justify-content:center;z-index:2000;padding:20px}
-    .modal{width:100%;max-width:420px;background:#fff;border-radius:10px;padding:22px;border:1px solid #eee;box-shadow:0 10px 40px rgba(0,0,0,0.12)}
-    .modal h2{font-size:20px;margin-bottom:8px}
-    .modal p{font-size:14px;color:#666;margin-bottom:14px}
-    .field{display:flex;flex-direction:column;gap:6px;margin-bottom:12px}
-    .field input{padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-size:14px}
-    .modal-actions{display:flex;gap:10px;justify-content:flex-end;margin-top:8px}
-    .btn{padding:10px 14px;border-radius:8px;cursor:pointer;border:0;font-weight:700}
-    .btn-primary{background:#e60023;color:#fff}
-    .btn-ghost{background:#f6f6f6;color:#333;border:1px solid #eaeaea}
-
-    /* small responsive tweaks */
-    @media (max-width:700px){
-        .top-header{padding:12px 18px}
-        .logo{font-size:20px}
-        .hero h1{font-size:28px}
-        .menu{display:none}
-    }
 </style>
 </head>
 <body>
@@ -77,19 +58,19 @@
             <div class="menu-item">IMAGE TOOLS ▼
                 <div class="dropdown">
                     <a href="image-generator.html" data-tool="ai-image-generator">AI Image Generator</a>
-                    <a href="#" data-tool="ai-portrait-generator">AI Portrait Generator</a>
-                    <a href="#" data-tool="ai-avatar-generator">AI Avatar Generator</a>
-                    <a href="#" data-tool="ai-sticker-generator">AI Sticker Generator</a>
-                    <a href="#" data-tool="ai-logo-generator">AI Logo Generator</a>
+                    <a href="portrait-generator.html" data-tool="ai-portrait-generator">AI Portrait Generator</a>
+                    <a href="avatar-generator.html" data-tool="ai-avatar-generator">AI Avatar Generator</a>
+                    <a href="sticker-generator.html" data-tool="ai-sticker-generator">AI Sticker Generator</a>
+                    <a href="logo-generator.html" data-tool="ai-logo-generator">AI Logo Generator</a>
                 </div>
             </div>
 
             <div class="menu-item">REMOVE TOOLS ▼
                 <div class="dropdown">
-                    <a href="#" data-tool="ai-background-remover">AI Background Remover</a>
-                    <a href="#" data-tool="ai-background-changer">AI Background Changer</a>
-                    <a href="#" data-tool="ai-object-remover">AI Object Remover</a>
-                    <a href="#" data-tool="ai-watermark-remover">AI Watermark Remover</a>
+                    <a href="background-remover.html" data-tool="ai-background-remover">AI Background Remover</a>
+                    <a href="background-changer.html" data-tool="ai-background-changer">AI Background Changer</a>
+                    <a href="object-remover.html" data-tool="ai-object-remover">AI Object Remover</a>
+                    <a href="watermark-remover.html" data-tool="ai-watermark-remover">AI Watermark Remover</a>
                 </div>
             </div>
 
@@ -111,7 +92,7 @@
 <!-- HERO -->
 <section class="hero">
     <h1>Every AI tool you need in one place</h1>
-    <p>Generate, remove, enhance and edit images instantly. All AI tools you need, at your fingertips — fast and easy to use.</p>
+    <p>Generate, remove, enhance and edit images instantly — all at your fingertips.</p>
 
     <div class="tags" id="tags">
         <button class="tag-btn active" data-filter="all">All</button>
@@ -126,62 +107,62 @@
 <main class="container">
     <div class="grid" id="toolsGrid">
 
-        <!-- each tool-box has data-category (comma separated allowed) -->
-        <div class="tool-box" data-category="generators,editors" data-href="ai-image-generator.html" tabindex="0">
+        <!-- FIXED: image generator -->
+        <div class="tool-box" data-category="generators,editors" data-href="image-generator.html">
             <i class="fa-solid fa-image"></i>
             <h3>AI Image Generator</h3>
             <p>Create images using AI prompts</p>
         </div>
 
-        <div class="tool-box" data-category="generators" data-href="ai-portrait-generator.html" tabindex="0">
+        <div class="tool-box" data-category="generators" data-href="portrait-generator.html">
             <i class="fa-solid fa-user"></i>
             <h3>AI Portrait Generator</h3>
             <p>Generate stylized portraits</p>
         </div>
 
-        <div class="tool-box" data-category="generators" data-href="ai-avatar-generator.html" tabindex="0">
+        <div class="tool-box" data-category="generators" data-href="avatar-generator.html">
             <i class="fa-solid fa-user-circle"></i>
             <h3>AI Avatar Generator</h3>
             <p>Create avatar images</p>
         </div>
 
-        <div class="tool-box" data-category="generators" data-href="ai-meme-generator.html" tabindex="0">
+        <div class="tool-box" data-category="generators" data-href="meme-generator.html">
             <i class="fa-solid fa-face-laugh"></i>
             <h3>AI Meme Generator</h3>
             <p>Make memes quickly</p>
         </div>
 
-        <div class="tool-box" data-category="generators" data-href="ai-sticker-generator.html" tabindex="0">
+        <div class="tool-box" data-category="generators" data-href="sticker-generator.html">
             <i class="fa-solid fa-sticky-note"></i>
             <h3>AI Sticker Generator</h3>
             <p>Sticker packs from images</p>
         </div>
 
-        <div class="tool-box" data-category="generators" data-href="ai-logo-generator.html" tabindex="0">
+        <div class="tool-box" data-category="generators" data-href="logo-generator.html">
             <i class="fa-brands fa-font-awesome"></i>
             <h3>AI Logo Generator</h3>
             <p>Logo drafts in seconds</p>
         </div>
 
-        <div class="tool-box" data-category="changers,editors" data-href="ai-background-changer.html" tabindex="0">
+        <div class="tool-box" data-category="changers,editors" data-href="background-changer.html">
             <i class="fa-solid fa-layer-group"></i>
             <h3>AI Background Changer</h3>
             <p>Swap backgrounds easily</p>
         </div>
 
-        <div class="tool-box" data-category="removers,editors" data-href="ai-background-remover.html" tabindex="0">
+        <div class="tool-box" data-category="removers,editors" data-href="background-remover.html">
             <i class="fa-solid fa-eraser"></i>
             <h3>AI Background Remover</h3>
             <p>Remove backgrounds instantly</p>
         </div>
 
-        <div class="tool-box" data-category="removers,editors" data-href="ai-object-remover.html" tabindex="0">
+        <div class="tool-box" data-category="removers,editors" data-href="object-remover.html">
             <i class="fa-solid fa-scissors"></i>
             <h3>AI Object Remover</h3>
             <p>Erase unwanted objects</p>
         </div>
 
-        <div class="tool-box" data-category="removers,editors" data-href="ai-watermark-remover.html" tabindex="0">
+        <div class="tool-box" data-category="removers,editors" data-href="watermark-remover.html">
             <i class="fa-solid fa-water"></i>
             <h3>AI Watermark Remover</h3>
             <p>Remove watermarks from images</p>
@@ -190,198 +171,38 @@
     </div>
 </main>
 
-<!-- LOGIN MODAL -->
-<div class="modal-backdrop" id="loginModal" aria-hidden="true" role="dialog" aria-modal="true">
-    <div class="modal" role="document">
-        <h2>Login</h2>
-        <p>Welcome back — login to continue.</p>
-        <div class="field">
-            <label>Email</label>
-            <input type="email" id="loginEmail" placeholder="you@example.com">
-        </div>
-        <div class="field">
-            <label>Password</label>
-            <input type="password" id="loginPassword" placeholder="••••••">
-        </div>
-        <div class="modal-actions">
-            <button class="btn btn-ghost" id="loginCancel">Cancel</button>
-            <button class="btn btn-primary" id="loginSubmit">Login</button>
-        </div>
-    </div>
-</div>
-
-<!-- SIGNUP MODAL -->
-<div class="modal-backdrop" id="signupModal" aria-hidden="true" role="dialog" aria-modal="true">
-    <div class="modal" role="document">
-        <h2>Sign up</h2>
-        <p>Create an account to save your work.</p>
-        <div class="field">
-            <label>Name</label>
-            <input type="text" id="signupName" placeholder="Your name">
-        </div>
-        <div class="field">
-            <label>Email</label>
-            <input type="email" id="signupEmail" placeholder="you@example.com">
-        </div>
-        <div class="field">
-            <label>Password</label>
-            <input type="password" id="signupPassword" placeholder="Choose a password">
-        </div>
-        <div class="modal-actions">
-            <button class="btn btn-ghost" id="signupCancel">Cancel</button>
-            <button class="btn btn-primary" id="signupSubmit">Create account</button>
-        </div>
-    </div>
-</div>
-
 <script>
 (function(){
-    // Utilities
-    const $ = (sel, root=document) => root.querySelector(sel);
-    const $$ = (sel, root=document) => Array.from(root.querySelectorAll(sel));
+    const $ = (s,r=document)=>r.querySelector(s);
+    const $$ = (s,r=document)=>Array.from(r.querySelectorAll(s));
 
-    // MODAL Logic
-    const loginBtn = $('#loginBtn');
-    const signupBtn = $('#signupBtn');
-    const loginModal = $('#loginModal');
-    const signupModal = $('#signupModal');
-    const loginCancel = $('#loginCancel');
-    const signupCancel = $('#signupCancel');
-    const loginSubmit = $('#loginSubmit');
-    const signupSubmit = $('#signupSubmit');
-
-    function openModal(modal){
-        modal.style.display = 'flex';
-        modal.setAttribute('aria-hidden','false');
-        // focus first input
-        const first = modal.querySelector('input');
-        if(first) first.focus();
-    }
-    function closeModal(modal){
-        modal.style.display = 'none';
-        modal.setAttribute('aria-hidden','true');
-    }
-
-    loginBtn.addEventListener('click', ()=> openModal(loginModal));
-    signupBtn.addEventListener('click', ()=> openModal(signupModal));
-    loginCancel.addEventListener('click', ()=> closeModal(loginModal));
-    signupCancel.addEventListener('click', ()=> closeModal(signupModal));
-
-    // Submit handlers (placeholder behavior)
-    loginSubmit.addEventListener('click', () => {
-        // basic validation
-        const email = $('#loginEmail').value.trim();
-        const pw = $('#loginPassword').value.trim();
-        if(!email || !pw){ alert('Please enter email and password.'); return; }
-        // placeholder success
-        alert('Logged in (placeholder).');
-        closeModal(loginModal);
-    });
-    signupSubmit.addEventListener('click', () => {
-        const name = $('#signupName').value.trim();
-        const email = $('#signupEmail').value.trim();
-        const pw = $('#signupPassword').value.trim();
-        if(!name || !email || !pw){ alert('Please fill all fields.'); return; }
-        alert('Account created (placeholder).');
-        closeModal(signupModal);
-    });
-
-    // Close modal when clicking backdrop
-    [loginModal, signupModal].forEach(modal=>{
-        modal.addEventListener('click', (e)=>{
-            if(e.target === modal) closeModal(modal);
+    // Tool card click
+    $$('.tool-box').forEach(box=>{
+        box.addEventListener('click',()=>{
+            const url = box.dataset.href;
+            if(url) window.location.href = url;
         });
     });
 
-    // Close modal on ESC
-    document.addEventListener('keydown', (e)=>{
-        if(e.key === 'Escape'){
-            if(loginModal.style.display === 'flex') closeModal(loginModal);
-            if(signupModal.style.display === 'flex') closeModal(signupModal);
-        }
-    });
+    // Dropdown mapping FIXED
+    const mapping = {
+        'ai-image-generator':'image-generator.html',
+        'ai-portrait-generator':'portrait-generator.html',
+        'ai-avatar-generator':'avatar-generator.html',
+        'ai-sticker-generator':'sticker-generator.html',
+        'ai-logo-generator':'logo-generator.html',
+        'ai-background-remover':'background-remover.html',
+        'ai-background-changer':'background-changer.html',
+        'ai-object-remover':'object-remover.html',
+        'ai-watermark-remover':'watermark-remover.html'
+    };
 
-    // TAG FILTERING
-    const tags = $$('#tags .tag-btn');
-    const toolsGrid = $('#toolsGrid');
-    const toolBoxes = $$('.tool-box', toolsGrid);
-
-    function setActiveTag(btn){
-        tags.forEach(t=>t.classList.remove('active'));
-        btn.classList.add('active');
-    }
-
-    function filterTools(filter){
-        toolBoxes.forEach(box=>{
-            const cats = box.dataset.category ? box.dataset.category.split(',').map(s=>s.trim()) : [];
-            if(filter === 'all' || cats.includes(filter)){
-                box.style.display = '';
-            } else {
-                box.style.display = 'none';
-            }
-        });
-    }
-
-    tags.forEach(btn=>{
-        btn.addEventListener('click', (e)=>{
-            const f = btn.dataset.filter;
-            setActiveTag(btn);
-            filterTools(f);
-        });
-    });
-
-    // initial filter = all
-    filterTools('all');
-
-    // Tool card click -> go to href (placeholder)
-    toolBoxes.forEach(box=>{
-        box.addEventListener('click', ()=>{
-            const href = box.dataset.href || '#';
-            // if real page exists, navigate; otherwise show placeholder alert
-            if(href && href !== '#'){
-                // Try navigate to a local page (user can replace with real route)
-                window.location.href = href;
-            } else {
-                alert('Open tool: ' + box.querySelector('h3').innerText);
-            }
-        });
-        // keyboard accessibility (Enter)
-        box.addEventListener('keydown', (e)=>{
-            if(e.key === 'Enter') box.click();
-        });
-    });
-
-    // Menu dropdown links: attempt to navigate by data-tool or just filter
     $$('.dropdown a').forEach(a=>{
-        a.addEventListener('click', (ev)=>{
-            ev.preventDefault();
-            const tool = a.dataset.tool;
-            if(!tool) return;
-            // map tool keys to categories or open page
-            const mapping = {
-                'ai-image-generator':'ai-image-generator.html',
-                'ai-portrait-generator':'ai-portrait-generator.html',
-                'ai-avatar-generator':'ai-avatar-generator.html',
-                'ai-sticker-generator':'ai-sticker-generator.html',
-                'ai-logo-generator':'ai-logo-generator.html',
-                'ai-background-remover':'ai-background-remover.html',
-                'ai-background-changer':'ai-background-changer.html',
-                'ai-object-remover':'ai-object-remover.html',
-                'ai-watermark-remover':'ai-watermark-remover.html'
-            };
-            const target = mapping[tool];
-            if(target){
-                // navigate if file exists (placeholder)
-                window.location.href = target;
-            }
+        a.addEventListener('click',e=>{
+            e.preventDefault();
+            const t = a.dataset.tool;
+            if(mapping[t]) window.location.href = mapping[t];
         });
-    });
-
-    // Home logo click returns to top and resets tags
-    $('#homeBtn').addEventListener('click', ()=>{
-        window.scrollTo({top:0,behavior:'smooth'});
-        const allBtn = $('#tags .tag-btn[data-filter="all"]');
-        if(allBtn) { allBtn.click(); }
     });
 
 })();
