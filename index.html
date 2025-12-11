@@ -113,21 +113,21 @@ body{background:#fff;color:#222;line-height:1.4}
             <div class="menu-item">
                 IMAGE TOOLS ▼
                 <div class="dropdown">
-                    <a href="1.image-generator.html" data-tool="ai-image-generator">AI Image Generator</a>
-                    <a href="2.Portrait-generator.html" data-tool="ai-portrait-generator">AI Portrait Generator</a>
-                    <a href="3.Avatar-generator.html" data-tool="ai-avatar-generator">AI Avatar Generator</a>
-                    <a href="5.Sticker-generator.html" data-tool="ai-sticker-generator">AI Sticker Generator</a>
-                    <a href="6.Logo-generator.html" data-tool="ai-logo-generator">AI Logo Generator</a>
+                    <a href="image-generator.html" data-tool="ai-image-generator">AI Image Generator</a>
+                    <a href="Portrait-generator.html" data-tool="ai-portrait-generator">AI Portrait Generator</a>
+                    <a href="Avatar-generator.html" data-tool="ai-avatar-generator">AI Avatar Generator</a>
+                    <a href="Sticker-generator.html" data-tool="ai-sticker-generator">AI Sticker Generator</a>
+                    <a href="Logo-generator.html" data-tool="ai-logo-generator">AI Logo Generator</a>
                 </div>
             </div>
 
             <div class="menu-item">
                 REMOVE TOOLS ▼
                 <div class="dropdown">
-                    <a href="8.Background-Remover.html" data-tool="ai-background-remover">AI Background Remover</a>
-                    <a href="7.Background-Changer.html" data-tool="ai-background-changer">AI Background Changer</a>
-                    <a href="9.object-remover.html" data-tool="ai-object-remover">AI Object Remover</a>
-                    <a href="10.WaterMark-Remover.html" data-tool="ai-watermark-remover">AI Watermark Remover</a>
+                    <a href="Background-Remover.html" data-tool="ai-background-remover">AI Background Remover</a>
+                    <a href="Background-Changer.html" data-tool="ai-background-changer">AI Background Changer</a>
+                    <a href="object-remover.html" data-tool="ai-object-remover">AI Object Remover</a>
+                    <a href="WaterMark-Remover.html" data-tool="ai-watermark-remover">AI Watermark Remover</a>
                 </div>
             </div>
 
@@ -163,61 +163,61 @@ body{background:#fff;color:#222;line-height:1.4}
 <main class="container">
 <div class="grid" id="toolsGrid">
 
-    <div class="tool-box" data-category="generators" data-href="1.image-generator.html">
+    <div class="tool-box" data-category="generators" data-href="image-generator.html">
         <i class="fa-solid fa-image"></i>
         <h3>AI Image Generator</h3>
         <p>Create images with AI</p>
     </div>
 
-    <div class="tool-box" data-category="generators" data-href="2.Portrait-generator.html">
+    <div class="tool-box" data-category="generators" data-href="Portrait-generator.html">
         <i class="fa-solid fa-user"></i>
         <h3>AI Portrait Generator</h3>
         <p>Make AI portraits</p>
     </div>
 
-    <div class="tool-box" data-category="generators" data-href="3.Avatar-generator.html">
+    <div class="tool-box" data-category="generators" data-href="Avatar-generator.html">
         <i class="fa-solid fa-user-circle"></i>
         <h3>AI Avatar Generator</h3>
         <p>Create avatars</p>
     </div>
 
-    <div class="tool-box" data-category="generators" data-href="4.Meme-generator.html">
+    <div class="tool-box" data-category="generators" data-href="Meme-generator.html">
         <i class="fa-solid fa-face-laugh"></i>
         <h3>AI Meme Generator</h3>
         <p>Generate memes easily</p>
     </div>
 
-    <div class="tool-box" data-category="generators" data-href="5.Sticker-generator.html">
+    <div class="tool-box" data-category="generators" data-href="Sticker-generator.html">
         <i class="fa-solid fa-sticky-note"></i>
         <h3>AI Sticker Generator</h3>
         <p>Create stickers</p>
     </div>
 
-    <div class="tool-box" data-category="generators" data-href="6.Logo-generator.html">
+    <div class="tool-box" data-category="generators" data-href="Logo-generator.html">
         <i class="fa-brands fa-font-awesome"></i>
         <h3>AI Logo Generator</h3>
         <p>Create logos fast</p>
     </div>
 
-    <div class="tool-box" data-category="changers" data-href="7.Background-Changer.html">
+    <div class="tool-box" data-category="changers" data-href="Background-Changer.html">
         <i class="fa-solid fa-layer-group"></i>
         <h3>AI Background Changer</h3>
         <p>Swap background</p>
     </div>
 
-    <div class="tool-box" data-category="removers" data-href="8.Background-Remover.html">
+    <div class="tool-box" data-category="removers" data-href="Background-Remover.html">
         <i class="fa-solid fa-eraser"></i>
         <h3>AI Background Remover</h3>
         <p>Remove background</p>
     </div>
 
-    <div class="tool-box" data-category="removers" data-href="9.object-remover.html">
+    <div class="tool-box" data-category="removers" data-href="object-remover.html">
         <i class="fa-solid fa-scissors"></i>
         <h3>AI Object Remover</h3>
         <p>Erase objects</p>
     </div>
 
-    <div class="tool-box" data-category="removers" data-href="10.WaterMark-Remover.html">
+    <div class="tool-box" data-category="removers" data-href="WaterMark-Remover.html">
         <i class="fa-solid fa-water"></i>
         <h3>AI Watermark Remover</h3>
         <p>Remove watermark</p>
@@ -232,16 +232,16 @@ body{background:#fff;color:#222;line-height:1.4}
 (function(){
 
 const mapping = {
-    'ai-image-generator':'1.image-generator.html',
-    'ai-portrait-generator':'2.Portrait-generator.html',
-    'ai-avatar-generator':'3.Avatar-generator.html',
-    'ai-meme-generator':'4.Meme-generator.html',
-    'ai-sticker-generator':'5.Sticker-generator.html',
-    'ai-logo-generator':'6.Logo-generator.html',
-    'ai-background-changer':'7.Background-Changer.html',
-    'ai-background-remover':'8.Background-Remover.html',
-    'ai-object-remover':'9.object-remover.html',
-    'ai-watermark-remover':'10.WaterMark-Remover.html'
+    'ai-image-generator':'image-generator.html',
+    'ai-portrait-generator':'Portrait-generator.html',
+    'ai-avatar-generator':'Avatar-generator.html',
+    'ai-meme-generator':'Meme-generator.html',
+    'ai-sticker-generator':'Sticker-generator.html',
+    'ai-logo-generator':'Logo-generator.html',
+    'ai-background-changer':'Background-Changer.html',
+    'ai-background-remover':'Background-Remover.html',
+    'ai-object-remover':'object-remover.html',
+    'ai-watermark-remover':'WaterMark-Remover.html'
 };
 
 document.querySelectorAll('.tool-box').forEach(box=>{
