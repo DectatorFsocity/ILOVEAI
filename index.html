@@ -86,19 +86,20 @@ IMAGE TOOLS ▼
 <div class="dropdown">
 <a href="image-generator.html" data-tool="ai-image-generator">AI Image Generator</a>
 <a href="Portrait-generator.html" data-tool="ai-portrait-generator">AI Portrait Generator</a>
-<a href="#" data-tool="ai-avatar-generator">AI Avatar Generator</a>
-<a href="#" data-tool="ai-sticker-generator">AI Sticker Generator</a>
-<a href="#" data-tool="ai-logo-generator">AI Logo Generator</a>
+<a href="Avatar-generator.html" data-tool="ai-avatar-generator">AI Avatar Generator</a>
+<a href="Sticker-generator.html" data-tool="ai-sticker-generator">AI Sticker Generator</a>
+<a href="Logo-generator.html" data-tool="ai-logo-generator">AI Logo Generator</a>
+<a href="Meme-generator.html" data-tool="ai-meme-generator">AI Meme Generator</a>
 </div>
 </div>
 
 <div class="menu-item">
 REMOVE TOOLS ▼
 <div class="dropdown">
-<a href="#" data-tool="ai-background-remover">AI Background Remover</a>
-<a href="#" data-tool="ai-background-changer">AI Background Changer</a>
-<a href="#" data-tool="ai-object-remover">AI Object Remover</a>
-<a href="#" data-tool="ai-watermark-remover">AI Watermark Remover</a>
+<a href="Background-Remover.html" data-tool="ai-background-remover">AI Background Remover</a>
+<a href="Background-Changer.html" data-tool="ai-background-changer">AI Background Changer</a>
+<a href="object-remover.html" data-tool="ai-object-remover">AI Object Remover</a>
+<a href="WaterMark-Remover.html" data-tool="ai-watermark-remover">AI Watermark Remover</a>
 </div>
 </div>
 
@@ -149,49 +150,49 @@ ALL AI TOOLS ▼
 <p>Generate stylized portraits</p>
 </div>
 
-<div class="tool-box" data-category="generators" data-href="ai-avatar-generator.html" tabindex="0">
+<div class="tool-box" data-category="generators" data-href="Avatar-generator.html" tabindex="0">
 <i class="fa-solid fa-user-circle"></i>
 <h3>AI Avatar Generator</h3>
 <p>Create avatar images</p>
 </div>
 
-<div class="tool-box" data-category="generators" data-href="ai-meme-generator.html" tabindex="0">
+<div class="tool-box" data-category="generators" data-href="Meme-generator.html" tabindex="0">
 <i class="fa-solid fa-face-laugh"></i>
 <h3>AI Meme Generator</h3>
 <p>Make memes quickly</p>
 </div>
 
-<div class="tool-box" data-category="generators" data-href="ai-sticker-generator.html" tabindex="0">
+<div class="tool-box" data-category="generators" data-href="Sticker-generator.html" tabindex="0">
 <i class="fa-solid fa-sticky-note"></i>
 <h3>AI Sticker Generator</h3>
 <p>Sticker packs from images</p>
 </div>
 
-<div class="tool-box" data-category="generators" data-href="ai-logo-generator.html" tabindex="0">
+<div class="tool-box" data-category="generators" data-href="Logo-generator.html" tabindex="0">
 <i class="fa-brands fa-font-awesome"></i>
 <h3>AI Logo Generator</h3>
 <p>Logo drafts in seconds</p>
 </div>
 
-<div class="tool-box" data-category="changers,editors" data-href="ai-background-changer.html" tabindex="0">
+<div class="tool-box" data-category="changers,editors" data-href="Background-Changer.html" tabindex="0">
 <i class="fa-solid fa-layer-group"></i>
 <h3>AI Background Changer</h3>
 <p>Swap backgrounds easily</p>
 </div>
 
-<div class="tool-box" data-category="removers,editors" data-href="ai-background-remover.html" tabindex="0">
+<div class="tool-box" data-category="removers,editors" data-href="Background-Remover.html" tabindex="0">
 <i class="fa-solid fa-eraser"></i>
 <h3>AI Background Remover</h3>
 <p>Remove backgrounds instantly</p>
 </div>
 
-<div class="tool-box" data-category="removers,editors" data-href="ai-object-remover.html" tabindex="0">
+<div class="tool-box" data-category="removers,editors" data-href="object-remover.html" tabindex="0">
 <i class="fa-solid fa-scissors"></i>
 <h3>AI Object Remover</h3>
 <p>Erase unwanted objects</p>
 </div>
 
-<div class="tool-box" data-category="removers,editors" data-href="ai-watermark-remover.html" tabindex="0">
+<div class="tool-box" data-category="removers,editors" data-href="WaterMark-Remover.html" tabindex="0">
 <i class="fa-solid fa-water"></i>
 <h3>AI Watermark Remover</h3>
 <p>Remove watermarks from images</p>
@@ -268,30 +269,19 @@ const signupCancel=$('#signupCancel');
 const loginSubmit=$('#loginSubmit');
 const signupSubmit=$('#signupSubmit');
 
-function openModal(m){
-m.style.display='flex';
-m.setAttribute('aria-hidden','false');
-const first=m.querySelector('input');
-if(first) first.focus();
-}
-
-function closeModal(m){
-m.style.display='none';
-m.setAttribute('aria-hidden','true');
-}
+function openModal(m){ m.style.display='flex'; m.setAttribute('aria-hidden','false'); const first=m.querySelector('input'); if(first) first.focus(); }
+function closeModal(m){ m.style.display='none'; m.setAttribute('aria-hidden','true'); }
 
 loginBtn.addEventListener('click',()=>openModal(loginModal));
 signupBtn.addEventListener('click',()=>openModal(signupModal));
 loginCancel.addEventListener('click',()=>closeModal(loginModal));
 signupCancel.addEventListener('click',()=>closeModal(signupModal));
 
-/* SUBMIT PLACEHOLDERS */
 loginSubmit.addEventListener('click',()=>{
 const email=$('#loginEmail').value.trim();
 const pw=$('#loginPassword').value.trim();
 if(!email||!pw){ alert('Please enter email and password.'); return; }
-alert('Logged in (placeholder).');
-closeModal(loginModal);
+alert('Logged in (placeholder).'); closeModal(loginModal);
 });
 
 signupSubmit.addEventListener('click',()=>{
@@ -299,18 +289,13 @@ const name=$('#signupName').value.trim();
 const email=$('#signupEmail').value.trim();
 const pw=$('#signupPassword').value.trim();
 if(!name||!email||!pw){ alert('Please fill all fields.'); return; }
-alert('Account created (placeholder).');
-closeModal(signupModal);
+alert('Account created (placeholder).'); closeModal(signupModal);
 });
 
-/* BACKDROP CLOSE */
 [loginModal,signupModal].forEach(modal=>{
-modal.addEventListener('click',(e)=>{
-if(e.target===modal) closeModal(modal);
-});
+modal.addEventListener('click',(e)=>{ if(e.target===modal) closeModal(modal); });
 });
 
-/* ESC */
 document.addEventListener('keydown',(e)=>{
 if(e.key==='Escape'){
 if(loginModal.style.display==='flex') closeModal(loginModal);
@@ -323,38 +308,16 @@ const tags=$$('#tags .tag-btn');
 const toolsGrid=$('#toolsGrid');
 const toolBoxes=$$('.tool-box',toolsGrid);
 
-function setActiveTag(b){
-tags.forEach(t=>t.classList.remove('active'));
-b.classList.add('active');
-}
+function setActiveTag(b){ tags.forEach(t=>t.classList.remove('active')); b.classList.add('active'); }
+function filterTools(f){ toolBoxes.forEach(box=>{ const cats=box.dataset.category? box.dataset.category.split(',').map(s=>s.trim()):[]; if(f==='all'||cats.includes(f)){ box.style.display=''; } else{ box.style.display='none'; } }); }
 
-function filterTools(f){
-toolBoxes.forEach(box=>{
-const cats=box.dataset.category? box.dataset.category.split(',').map(s=>s.trim()):[];
-if(f==='all'||cats.includes(f)){ box.style.display=''; }
-else{ box.style.display='none'; }
-});
-}
-
-tags.forEach(btn=>{
-btn.addEventListener('click',()=>{
-setActiveTag(btn);
-filterTools(btn.dataset.filter);
-});
-});
+tags.forEach(btn=>{ btn.addEventListener('click',()=>{ setActiveTag(btn); filterTools(btn.dataset.filter); }); });
 
 filterTools('all');
 
-/* TOOLBOX CLICK */
 toolBoxes.forEach(b=>{
-b.addEventListener('click',()=>{
-const href=b.dataset.href || '#';
-if(href && href!=='#') window.location.href = href;
-else alert('Open tool: '+b.querySelector('h3').innerText);
-});
-b.addEventListener('keydown',(e)=>{
-if(e.key==='Enter') b.click();
-});
+b.addEventListener('click',()=>{ const href=b.dataset.href||'#'; if(href&&href!=='#') window.location.href=href; else alert('Open tool: '+b.querySelector('h3').innerText); });
+b.addEventListener('keydown',(e)=>{ if(e.key==='Enter') b.click(); });
 });
 
 /* MENU LINKS */
@@ -367,26 +330,22 @@ if(!tool) return;
 const mapping={
 'ai-image-generator':'image-generator.html',
 'ai-portrait-generator':'Portrait-generator.html',
-'ai-avatar-generator':'ai-avatar-generator.html',
-'ai-sticker-generator':'ai-sticker-generator.html',
-'ai-logo-generator':'ai-logo-generator.html',
-'ai-background-remover':'ai-background-remover.html',
-'ai-background-changer':'ai-background-changer.html',
-'ai-object-remover':'ai-object-remover.html',
-'ai-watermark-remover':'ai-watermark-remover.html'
+'ai-avatar-generator':'Avatar-generator.html',
+'ai-sticker-generator':'Sticker-generator.html',
+'ai-logo-generator':'Logo-generator.html',
+'ai-background-remover':'Background-Remover.html',
+'ai-background-changer':'Background-Changer.html',
+'ai-object-remover':'object-remover.html',
+'ai-watermark-remover':'WaterMark-Remover.html',
+'ai-meme-generator':'Meme-generator.html'
 };
 
 const target=mapping[tool];
 if(target) window.location.href=target;
-
 });
 });
 
-/* HOME */
-$('#homeBtn').addEventListener('click',()=>{
-window.scrollTo({top:0,behavior:'smooth'});
-$('#tags .tag-btn[data-filter="all"]').click();
-});
+$('#homeBtn').addEventListener('click',()=>{ window.scrollTo({top:0,behavior:'smooth'}); $('#tags .tag-btn[data-filter="all"]').click(); });
 
 })();
 </script>
